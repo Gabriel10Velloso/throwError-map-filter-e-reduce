@@ -1,0 +1,107 @@
+<!-- ⏩ Start sectionRegister 2 REGISTER-->
+<!-- ✌ Start Registry -->
+<h1>{{errorMessage}}</h1>
+        {{celcius}} <br>
+        reduce: {{sum}}
+        
+<div class="teste">
+  <form #cadastroLogin="ngForm" class="">
+    <div class="card col s12">
+      <div>
+        <!-- ☝ Start block Resistry-->
+        <div class="card-content white-text">
+          <!-- Alert message success registering-->
+          <!-- <div *ngIf="sucesso"
+            class="card-panel grey darken-4 blue-text lighten-3 text-lighten-3">
+            <h5>Cadastro realizado com sucesso! &nbsp; 😁</h5>
+          </div> -->
+          <span class="card-title center loginCardRegister">Cadastre-se</span>
+
+          <!-- Start Name -->
+          <div class="row">
+            <div class="input-field col s12">
+              <i class="material-icons prefix perfil2">account_circle</i>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                [(ngModel)]="user.name"
+              />
+              <label
+                class="labelCadastro"
+                data-error="Mínimo 3 caracteres"
+                data-success="OK"
+                for="name"
+              >
+                Nome Completo
+              </label>
+            </div>
+          </div>
+          <!-- And Name -->
+
+          <!-- Start Email -->
+          <div class="row">
+            <div class="input-field col s12">
+              <i class="material-icons prefix perfil2">email</i>
+              <input
+                type="email"
+                name="email"
+                required
+                [(ngModel)]="user.email"
+              />
+              <label
+                class="labelCadastro"
+                data-error="Entre com o email"
+                data-success="OK"
+                for="email"
+              >
+                Email
+              </label>
+            </div>
+          </div>
+          <!-- End Email -->
+
+          <!-- Start password -->
+          <div class="row">
+            <div class="input-field col s12">
+              <i class="material-icons prefix perfil2">vpn_key</i>
+              <input
+                type="password"
+                name="password"
+                [(ngModel)]="user.password"
+                name="password"
+              />
+              <label
+                class="labelCadastro"
+                data-error="Mínimo 6 caracteres e máximo 20"
+                data-success="OK"
+                for="password"
+                >Senha</label
+              >
+            </div>
+          </div>
+          <!-- End password -->
+
+          <button      class="blue grey darken-4 buttonRegisterCel"         (click)="register()" >
+            Enviar Cadastro
+          </button>
+          <div
+            class="preloader-wrapper  small sendCadastro 
+                                     active"
+            *ngIf="isLoadingCadastro"
+          >
+            <div class="spinner-layer spinner-red-only">
+              <div class="circle-clipper right"><div class="circle"></div></div>
+            </div>
+          </div>
+          <!-- <i
+            type="submit"
+            (click)="onMostrarCard()"
+            class="material-icons prefix left arrowSeta2">arrow_back</i > -->
+        </div>
+        <!-- ☝ End block registering-->
+      </div>
+    </div>
+  </form>
+</div>
+<!-- ✌ End Register-->
